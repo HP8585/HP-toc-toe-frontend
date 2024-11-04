@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-gray-950 text-slate-100
+}
+
+.input-group{
+    @apply relative w-full 
+}
+.input-group > label{
+    @apply duration-200 absolute left-2 top-0.5 cursor-pointer
+}
+input{
+    @apply rounded py-0.5 px-2 outline-none w-full bg-gray-900;
+}
+.input-group input:focus ~ label,
+.input-group input:valid ~ label{
+    @apply -translate-y-7
+}
