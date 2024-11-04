@@ -21,7 +21,7 @@ onMounted(()=>{
     });
 
     socketStore.socket?.on("playAgainDeclined", ()=>{
-    console.log("Play Again Declined")
+    // console.log("Play Again Declined")
       socketStore.modalStatus = "Your opponent rejected the game :(";
       buttonsShown.value = false;
 
@@ -40,7 +40,6 @@ onMounted(()=>{
 
     socketStore.socket?.on("previousPlayer", (player)=>{
       userStore.previousPlayer = player;
-      console.log("Previous player")
     });
 
     socketStore.socket?.on("roomFull", ()=> alert("Room full"));

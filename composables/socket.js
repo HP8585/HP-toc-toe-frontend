@@ -1,7 +1,7 @@
 
 
 export const updateGame = (data)=>{
-    console.log('hahah', data);
+    // console.log('hahah', data);
 
 
     const socketStore = useSocketStore();
