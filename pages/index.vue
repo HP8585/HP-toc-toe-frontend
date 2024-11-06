@@ -49,7 +49,8 @@ function joinRoom(){
 
 definePageMeta({
     middleware: ['in-game']
-  })
+});
+
 </script>
 
 <template>

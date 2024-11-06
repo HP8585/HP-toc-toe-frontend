@@ -18,7 +18,9 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
     '@nuxt/icon',
     'floating-vue/nuxt',
-    '@nuxt/ui', 
+    '@nuxt/ui',
+    '@vueuse/nuxt',
+    '@nuxt/scripts'
   ],
   vite:{
     server:{

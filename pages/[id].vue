@@ -36,6 +36,7 @@ definePageMeta({
 </script>
 
 <template>
+    <Confetti/>
     <ClientOnly>
     <div class="mainGameBox">
         <h1 class="turn">{{ userStore.gameState }}</h1>

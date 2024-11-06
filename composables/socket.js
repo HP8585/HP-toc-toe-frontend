@@ -6,6 +6,7 @@ export const updateGame = (data)=>{
 
     const socketStore = useSocketStore();
     const userStore = useUserStore();
+    const gameStore = useGameStore();
 
     socketStore.gameOver = false;
     socketStore.modalStatus = "Are you willing to play again?";
@@ -51,6 +52,14 @@ export const updateGame = (data)=>{
     } else if (board.every(cell => cell)) { // Check for a draw only if there's no winner
         userStore.gameState = "It's a draw!";
         socketStore.gameOver = true;
+    }
+
+    if(winner == userStore.symbol){
+        if(gameStore.jsConfetti !== (null || undefined)){
+            gameStore.jsConfetti?.addConfetti({
+                emojis: ["❌", "⭕", "🎉"]
+            })
+        }
     }
 
     if(data.previousPlayer !== null){

@@ -4,10 +4,13 @@ export const useGameStore = defineStore('gameStore', ()=>{
     const room = ref(null);
     const name = ref(null);
 
+    const jsConfetti = ref(null);
+
     return{
         isInGame,
         room,
-        name
+        name,
+        jsConfetti
     }
 },{
     persist:{
