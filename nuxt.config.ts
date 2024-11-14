@@ -37,5 +37,24 @@ export default defineNuxtConfig({
     transpile: [
       'pinia-plugin-persistedstate',
     ]
+  },
+  app:{
+    head:{
+      script:[
+        {
+          type: 'text/javascript',
+          children: `
+          window.RAYCHAT_TOKEN = "88634213-22fe-47b0-98ee-6fc0dd9d5ccc";
+          (function () {
+            var d = document;
+            var s = d.createElement("script");
+            s.src = "https://widget-react.raychat.io/install/widget.js";
+            s.async = true;
+            d.getElementsByTagName("head")[0].appendChild(s);
+          })();
+        `
+        }
+      ]
+    }
   }
 })
