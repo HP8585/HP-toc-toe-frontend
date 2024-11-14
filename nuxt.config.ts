@@ -44,14 +44,15 @@ export default defineNuxtConfig({
         {
           type: 'text/javascript',
           children: `
-          window.RAYCHAT_TOKEN = "88634213-22fe-47b0-98ee-6fc0dd9d5ccc";
-          (function () {
-            var d = document;
-            var s = d.createElement("script");
-            s.src = "https://widget-react.raychat.io/install/widget.js";
-            s.async = true;
-            d.getElementsByTagName("head")[0].appendChild(s);
-          })();
+      window.RAYCHAT_TOKEN = "415c23ef-28e5-47b1-a914-da1d3baa7eac";
+      (function () {
+          d = document;
+          s = d.createElement("script");
+          s.src = "https://widget-react.raychat.io/install/widget.js";
+          s.async = 1;
+          d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    
         `
         }
       ]
